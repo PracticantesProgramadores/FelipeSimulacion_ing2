@@ -1,0 +1,156 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    background-image: url("../imagenes/ChatGPT\ Image\ 26\ jun\ 2025\,\ 12_18_55\ p.m..png");
+}
+h1{
+    background-color: rgb(251, 73, 73);
+    border-radius: 30px;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 10px;
+    border: 5px solid;
+    text-align: center;
+}
+h3{
+    background-color: rgb(251, 73, 73);
+    border-radius: 30px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 2%;
+    padding: 10px;
+    border: 5px solid;
+    text-align: center;
+}
+h4{
+    background-color: rgb(251, 73, 73);
+    border-radius: 30px;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 5%;
+    padding: 10px;
+    border: 5px solid;
+    text-align: center;
+}
+/* .container{
+    background-color: rgba(39, 37, 37, 0.8);
+    padding-top: 20px;
+} */
+
+.container{
+    background-color: rgba(132, 132, 132, 0.9);
+    border-radius: 30px;
+    margin: 3%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    border: 5px solid;
+}
+.containerF{
+    background-color: rgba(132, 132, 132, 0.9);
+    border-radius: 30px;
+    margin: 3%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    border: 5px solid;
+}
+.containerPreg{
+    background-color: rgba(255, 247, 103, 0.5);
+    padding: 10px;
+    margin-top: 1%;
+    margin-bottom: 3%;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 30px;
+    color: rgb(0, 0, 0);
+    border: 5px solid;
+}
+textarea.campo{
+    height: 15px;
+}
+.btnF{
+    background-color: antiquewhite;
+    border-radius: 30px;
+    padding: 15px;
+    font-size: 18px;
+    cursor: pointer;
+    border: 4px solid;
+}
+.btnFi{
+    background-color: rgb(251, 73, 73);
+    border-radius: 30px;
+    margin-top: 30px;
+    padding: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 18px;
+    cursor: pointer;
+    border: 5px solid;
+}
+.opciones{
+    background-color: antiquewhite;
+    border-radius: 30px;
+    padding: 15px;
+    font-size: 18px;
+    text-align: center;
+    /* border: 4px solid; */
+}
+.opcionesMod{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+    gap: 15%;
+    margin-left: 30%;
+    margin-right: 30%;
+    background-color: rgb(134, 131, 131,0.4);
+    /* border-radius: 30px; */
+    /* padding: 10px; */
+    padding-left: 11.8%;
+    padding-right: 9%;
+    border-radius: 30px;
+}
+/* .resp{
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 30px;
+    border: 4px solid;
+    margin-left: 5%;
+    margin-right: 5%;
+    color: aliceblue;
+} */
+
+textarea.resp{
+    height: 350px;
+    width: 400px;
+    background-color: rgba(0, 0, 0);
+    border-radius: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
+    color: aliceblue;
+    text-align: center;
+    border: 4px solid;
+    border-color: rgb(251, 73, 73);
+}
+
+
+
+/* .opcionesMod2{
+    display: flex;
+    gap: 10%;
+    margin-left: 30%;
+    margin-right: 30%;
+    background-color: rgb(134, 131, 131,0.4);
+    border-radius: 30px;
+    padding: 10px;
+    padding-left: 55px;
+    padding-right: 55px;
+} */
+
+/* .opcionesMod{
+    display: flex;
+    gap: 15px;
+    margin-left: 10%;
+    margin-left: 10%;
+} */
+/* .opcionesMod.p{
+    margin: 0;
+    padding: 5px 10px;
+} */

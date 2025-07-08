@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/estilo.css">
+    <title>Actividad2 Ing2</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Ejercicio #2</h1>
+        <h3>Para este ejercicio debes de escribir la palabra correcta</h3>
+
+        <div class="containerPreg">
+            <p> <b>Last weekend, my family and I <textarea id="campo0" class="campo" oninput="verificar2()"></textarea> (1) to the mountains. We <textarea id="campo1" class="campo" oninput="verificar2()"></textarea> (2) there early in the morning and <textarea id="campo2" class="campo" oninput="verificar2()"></textarea> (3) a small cabin near the lake. My sister <textarea id="campo3" class="campo" oninput="verificar2()"></textarea> (4) photos while my parents <textarea id="campo4" class="campo" oninput="verificar2()"></textarea> (5) lunch. Later, we <textarea id="campo5" class="campo" oninput="verificar2()"></textarea> (6) around the forest and enjoyed the fresh air.</b></p>
+            <div class="opciones">
+                <b>
+                    <p>Teniendo en cuenta las siguientes palabras, escribe de manera correcta la palabra en el espacio en blanco de la oracion.</p>
+                    <div class="opcionesMod">
+                        <p>arrived</p>
+                        <p>took</p>
+                        <p>went</p>
+                        <p>walked</p>
+                        <p>found</p>
+                        <p>prepared</p>
+                    </div>
+                </b>
+            </div>
+        </div>
+        <button class="btnF" onclick="finalizar()">Finalizar</button>
+    </div>
+    <script>
+        let campo0= document.getElementById("campo0");
+        let campo1= document.getElementById("campo1");
+        let campo2= document.getElementById("campo2");
+        let campo3= document.getElementById("campo3");
+        let campo4= document.getElementById("campo4");
+        let campo5= document.getElementById("campo5");
+
+        let campos=[campo0, campo1, campo2, campo3, campo4, campo5];
+        let opciones=["went", "arrived", "found", "took", "prepared", "walked"];
+        let respuestas=["", "", "", "", "", ""];
+
+        function verificar(){
+            let cont= 0;
+            for(let i = 0; i < 6; i++){
+                const textoIngresado= campos[i].value.toLowerCase().trim();
+                if(textoIngresado=== opciones[i]){
+                    cont++;
+                    respuestas[i]= "Correcta";
+                }else{
+                    respuestas[i]= "Incorrecta";
+                }
+            }
+            return cont;
+        }
+        function finalizar(){
+            let correctas= verificar();
+            if(campos[0].value == "" || campos[1].value == "" || campos[2].value == "" || campos[3].value == "" || campos[4].value == "" || campos[5].value == ""){
+                alert("Tienes un campo sin llenar, escribe una de las palabras.");
+            }else{
+                let msj2= "\nRespuestas correctas ejercicio#2: "+correctas +"\n\nDetalles: "+ " \n\n1. "+respuestas[0]+ " \n2. "+respuestas[1]+ " \n3. "+respuestas[2]+ " \n4. "+respuestas[3]+ " \n5. "+respuestas[4]+ " \n6. "+respuestas[5];
+                localStorage.setItem("mensaje2", msj2);
+                // let msj1= localStorage.getItem("mensaje");
+                // alert(msj1+msj2);
+                window.location.href= 'final.html';
+            }
+        }
+
+    </script>
+</body>
+</html>

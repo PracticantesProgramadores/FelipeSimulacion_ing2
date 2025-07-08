@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/estilo.css">
+    <title>Resultados</title>
+</head>
+<body>
+    <div class="containerF">
+        <h4>Has finalizado, estas son tus respuestas: </h4>
+        <div>
+            <textarea id="respuestas" class="resp"></textarea>
+        </div>
+        <a href="../html/index.html"><button class="btnFi">Salir</button></a>
+    </div>
+    <!-- <h3>Respuestas correctas ejercicio#2: </h3> -->
+    <!-- <textarea id="respuestas2" class="resp"></textarea> -->
+    <script>
+        let resp1= document.getElementById("respuestas");
+        // let resp2= document.getElementById("respuestas2");
+        let msj1= localStorage.getItem("mensaje");
+        let msj2= localStorage.getItem("mensaje2");
+
+        resp1.textContent= msj1+ "\n"+ msj2;
+        // resp2.textContent= msj2;
+
+    </script>
+</body>
+</html>

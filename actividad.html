@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/estilo.css">
+    <title>Actividad Ing2</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Ejercicio #1</h1>
+        <h3>Para este ejercicio debes de escribir la palabra correcta</h3>
+
+        <div class="containerPreg">
+            <p> <b>Yesterday, I <textarea id="campo0" class="campo" oninput="verificar()"></textarea>(1) up early because I <textarea id="campo1" class="campo" oninput="verificar()"></textarea>(2) to catch the bus to school. It <textarea id="campo2" class="campo"></textarea>(3) raining, so I <textarea id="campo3" class="campo"></textarea>(4) an umbrella. At school, we <textarea id="campo4" class="campo"></textarea>(5) a test in English class. I think I <textarea id="campo5" class="campo"></textarea>(6) well because I studied a lot.</b></p>
+            <div class="opciones">
+                <b>
+                    <p>Teniendo en cuenta las siguientes palabras, escribe de manera correcta la palabra en el espacio en blanco de la oracion.</p>                   
+                    <div class="opcionesMod">
+                        <p>took</p>
+                        <p>was</p>
+                        <p>did</p>
+                        <p>had</p>
+                        <p>woke</p>
+                        <p>had</p>
+                    </div>
+                </b>
+            </div>
+            <!-- <p> <b>Last weekend, my family and I <textarea id="campoDos0" class="campo" oninput="verificar2()"></textarea> (1) to the mountains. We <textarea id="campoDos1" class="campo" oninput="verificar2()"></textarea> (2) there early in the morning and <textarea id="campoDos2" class="campo" oninput="verificar2()"></textarea> (3) a small cabin near the lake. My sister <textarea id="campoDos3" class="campo" oninput="verificar2()"></textarea> (4) photos while my parents <textarea id="campoDos4" class="campo" oninput="verificar2()"></textarea> (5) lunch. Later, we <textarea id="campoDos5" class="campo" oninput="verificar2()"></textarea> (6) around the forest and enjoyed the fresh air.</b></p>
+            <div class="opciones">
+                <b>
+                    <p>Teniendo en cuenta las siguientes palabras, escribe de manera correcta la palabra en el espacio en blanco de la oracion.</p>
+                    <div class="opcionesMod">
+                        <p>arrived</p>
+                        <p>took</p>
+                        <p>went</p>
+                        <p>walked</p>
+                        <p>found</p>
+                        <p>prepared</p>
+                    </div>
+                </b>
+            </div> -->
+        </div>
+        <button class="btnF" onclick="finalizar()">Continuar</button>
+    </div>
+    <script>
+        let campo0= document.getElementById("campo0");
+        let campo1= document.getElementById("campo1");
+        let campo2= document.getElementById("campo2");
+        let campo3= document.getElementById("campo3");
+        let campo4= document.getElementById("campo4");
+        let campo5= document.getElementById("campo5");
+
+        let campos=[campo0, campo1, campo2, campo3, campo4, campo5];
+        let opciones=["woke", "had", "was", "took", "had", "did"];
+        let respuestas=["", "", "", "", "", ""];
+
+        function verificar(){
+            let cont= 0;
+
+            for(let i = 0; i < 6; i++){
+                const textoIngresado= campos[i].value.toLowerCase().trim();
+                if(textoIngresado=== opciones[i]){
+                    cont++;
+                    respuestas[i]= "Correcta";
+                }else{
+                    respuestas[i]= "Incorrecta";
+                }
+            }
+            return cont;
+        }
+
+
+        function finalizar(){
+            let correctas= verificar();
+            // let mensaje= "Respuestas buenas ejercicio #1: "+correctas;
+            if(campos[0].value == "" || campos[1].value == "" || campos[2].value == "" || campos[3].value == "" || campos[4].value == "" || campos[5].value == ""){
+                alert("Tienes un campo sin llenar, escribe una de las palabras.");
+            }else{
+                let msj= "Respuestas correctas ejercicio#1: "+correctas +"\n\nDetalles: "+ " \n\n1. "+respuestas[0] + " \n2. "+respuestas[1] + " \n3. "+respuestas[2] + " \n4. "+respuestas[3] + " \n5. "+respuestas[4] + " \n6. "+respuestas[5];
+                localStorage.setItem("mensaje", msj);
+                window.location.href= 'actividad2.html';
+            }
+        }
+
+    </script> 
+</body>
+</html>
